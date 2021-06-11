@@ -2,14 +2,21 @@
 
 import numpy as np
 
+# sign
 def s(a):
     if a < 0:        
         return '-'
     else:
         return '+'
+# indent
+def ii(a):
+    if a < 0:        
+        return ''
+    else:
+        return ' '    
 
-def q(i):
-    rng = np.random.default_rng()
+def q(i,j=0):
+    rng = np.random.default_rng(j)
 
     eq1 = rng.integers(low=-10, high=10, size=3)
     eq2 = rng.integers(low=-10, high=10, size=3)
@@ -18,11 +25,12 @@ def q(i):
     x = np.linalg.solve(a,b)
 
     print(f'problem {i}:')
-    print(f'{a[0][0]}x {s(a[0][1])} {abs(a[0][1])}y = {b[0]}')
-    print(f'{a[1][0]}x {s(a[1][1])} {abs(a[1][1])}y = {b[1]}')
+    print(f'{ii(a[0][0])}{a[0][0]}x {s(a[0][1])} {abs(a[0][1])}y = {b[0]}')
+    print(f'{ii(a[1][0])}{a[1][0]}x {s(a[1][1])} {abs(a[1][1])}y = {b[1]}')
 
-    print(f'solution {i}:')
-    print(f'x = {x[0]:.2}, y = {x[1]:.2}')
+    if h:
+        print(f'solution {i}:')
+        print(f'x = {x[0]:.2}, y = {x[1]:.2}')
     print()
 
 
@@ -32,7 +40,8 @@ def q(i):
 if __name__ == "__main__":
     print('main')
     n = 4
-
+    j = 1
+    h = False
     for i in range(4):
-        q(i)
+        q(i,j)
 
