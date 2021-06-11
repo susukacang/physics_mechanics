@@ -24,3 +24,9 @@ m.q(21)
 # added more commands
 m.q(22)
 m.q(23)
+
+
+# added some more more commands
+m.q(26)
+m.q(27)
+m.q(28)
