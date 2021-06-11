@@ -15,24 +15,3 @@ m.q(9)
 m.q(10)
 
 m.q(12)
-
-# added commands
-m.q(20)
-
-m.q(21)
-
-# added more commands
-m.q(22)
-m.q(23)
-
-# reordered positions....
-
-# added some more commands
-m.q(24)
-m.q(25)
-
-# added some more more commands
-m.q(26)
-m.q(27)
-m.q(28)
-
