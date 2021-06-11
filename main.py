@@ -1,6 +1,7 @@
 # learning physics through programming
 
 import numpy as np
+import random
 
 # sign
 def s(a):
@@ -15,8 +16,8 @@ def ii(a):
     else:
         return ' '    
 
-def q(i,j=0):
-    rng = np.random.default_rng(j)
+def q(i,j=0, h=True):
+    rng = np.random.default_rng(random.randint(0,j))
 
     eq1 = rng.integers(low=-10, high=10, size=3)
     eq2 = rng.integers(low=-10, high=10, size=3)
@@ -25,8 +26,10 @@ def q(i,j=0):
     x = np.linalg.solve(a,b)
 
     print(f'problem {i}:')
-    print(f'{ii(a[0][0])}{a[0][0]}x {s(a[0][1])} {abs(a[0][1])}y = {b[0]}')
-    print(f'{ii(a[1][0])}{a[1][0]}x {s(a[1][1])} {abs(a[1][1])}y = {b[1]}')
+    # print(f'{ii(a[0][0])}{a[0][0]}x {s(a[0][1])} {abs(a[0][1])}y = {b[0]}')
+    # print(f'{ii(a[1][0])}{a[1][0]}x {s(a[1][1])} {abs(a[1][1])}y = {b[1]}')
+    print(f'{a[0][0]}x + {(a[0][1])}y = {b[0]}')
+    print(f'{a[1][0]}x + {(a[1][1])}y = {b[1]}')
 
     if h:
         print(f'solution {i}:')
@@ -39,9 +42,12 @@ def q(i,j=0):
 
 if __name__ == "__main__":
     print('main')
-    n = 4
-    j = 1
-    h = False
-    for i in range(4):
-        q(i,j)
+    n = 6
+    r = 1
+    random.seed(r)
+    h = True
+    for i in range(n):
+        j = random.randint(0,99)
+        q(i,j,h)
+        
 
