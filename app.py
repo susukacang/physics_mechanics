@@ -20,3 +20,7 @@ m.q(12)
 m.q(20)
 
 m.q(21)
+
+# added more commands
+m.q(22)
+m.q(23)
