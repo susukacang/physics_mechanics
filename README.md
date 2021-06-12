@@ -1,3 +1,3 @@
-# linear algebra
+# Physics mechanics
 
-Simultaneous equations for Linus
+Study of momentum
