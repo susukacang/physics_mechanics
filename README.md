@@ -1,1 +1,3 @@
-# physics_mechanics
+# linear algebra
+
+Simultaneous equations for Linus
