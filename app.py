@@ -1,17 +1,12 @@
 import main as m
+from flask import Flask, render_template, redirect, request, url_for, jsonify, session
+app = Flask(__name__)
 
-n = 5
 
-m.q(5)
-
-m.q(2)
-
-m.q(3)
-
-m.q(7)
-
-m.q(9)
-
-m.q(10)
-
-m.q(12)
+@app.route('/')
+def home():
+    if request.method == 'GET':
+        # number of questions
+        n = 5
+        result = m.p(5)
+        return render_template('index.html', result=result)
